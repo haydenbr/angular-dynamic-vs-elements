@@ -1,0 +1,9 @@
+<img class="image" [src]="character.imageUrl">
+<div class="content">
+	<div class="bio">{{character.bio}}</div>
+	<ul class="movies">
+		<li *ngFor="let movie of character.movies">
+			<a class="link" [href]="movie.link" target="_blank">{{movie.title}}</a>
+		</li>
+	</ul>
+</div>
