@@ -2,21 +2,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { MyDynamicComponent } from './components/dynamic-component/dynamic.component';
+import { COMPONENTS } from './components';
 import { DataService } from './data.service';
-import { DynamicDirective } from './dynamic-component.directive';
+import { ComponentHostDirective } from './component-host.directive';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		MyDynamicComponent,
-		DynamicDirective
+		COMPONENTS,
+		ComponentHostDirective
 	],
 	imports: [
 		BrowserModule
 	],
 	providers: [DataService],
 	bootstrap: [AppComponent],
-	entryComponents: [MyDynamicComponent]
+	entryComponents: [COMPONENTS]
 })
 export class AppModule { }
