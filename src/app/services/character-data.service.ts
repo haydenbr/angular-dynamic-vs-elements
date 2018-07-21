@@ -119,7 +119,7 @@ const data = [
 
 @Injectable()
 export class CharacterDataService {
-	getCharacterData() {
+	getData() {
 		return data;
 	}
 }

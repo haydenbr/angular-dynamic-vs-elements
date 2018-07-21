@@ -1,5 +1,8 @@
 <h1>Solo: Dynamic Components vs Angular Elements</h1>
 
 <div class="list-container">
-	<ng-template component-host></ng-template>
+	<dynamic-shell
+		*ngFor="let item of data"
+		[data]="item"
+	></dynamic-shell>
 </div>

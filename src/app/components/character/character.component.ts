@@ -7,6 +7,18 @@ import { Subject } from 'rxjs';
 	styleUrls: [ 'character.component.css' ]
 })
 export class CharacterComponent {
-	@Input() character;
+	@Input() data;
 	@Output() movieClick = new Subject();
+
+	get bio() {
+		return this.data.bio;
+	}
+
+	get imageUrl() {
+		return this.data.imageUrl;
+	}
+
+	get movies() {
+		return this.data.movies;
+	}
 }

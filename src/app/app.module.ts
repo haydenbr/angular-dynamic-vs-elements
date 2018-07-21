@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { COMPONENTS } from './components';
+import { ComponentMapService } from './component-map.service';
+import { DynamicShellComponent } from './dynamic-shell.component';
 import { SERVICES } from './services';
 import { ComponentHostDirective } from './component-host.directive';
 
@@ -10,12 +12,13 @@ import { ComponentHostDirective } from './component-host.directive';
 	declarations: [
 		AppComponent,
 		COMPONENTS,
-		ComponentHostDirective
+		ComponentHostDirective,
+		DynamicShellComponent
 	],
 	imports: [
 		BrowserModule
 	],
-	providers: [SERVICES],
+	providers: [SERVICES, ComponentMapService],
 	bootstrap: [AppComponent],
 	entryComponents: [COMPONENTS]
 })

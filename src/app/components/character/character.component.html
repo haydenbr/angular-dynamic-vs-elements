@@ -1,8 +1,8 @@
-<img class="image" [src]="character.imageUrl">
+<img class="image" [src]="imageUrl">
 <div class="content">
-	<div class="bio">{{character.bio}}</div>
+	<div class="bio">{{bio}}</div>
 	<ul class="movies">
-		<li *ngFor="let movie of character.movies">
+		<li *ngFor="let movie of movies">
 			<a class="link" [href]="movie.link" target="_blank">{{movie.title}}</a>
 		</li>
 	</ul>
