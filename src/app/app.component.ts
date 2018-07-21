@@ -32,11 +32,20 @@ export class AppComponent implements OnInit, OnDestroy {
 		const index = Math.floor(this.characters.length * Math.random());
 		const character = this.characters[index];
 
-		const componentFactory = this.componentFactoryResolver.resolveComponentFactory(MyDynamicComponent);
-		const viewContainerRef = this.componentHost.viewContainerRef;
-		viewContainerRef.clear();
+		// get the factory for the desired component
+		/*
+		TODO: I don't like that you have to pass the component class here. I wish I could create
+		a dynamic component using the component selector. I guess I would have to keep a map of
+		*/
 
+		const componentFactory = this.componentFactoryResolver.resolveComponentFactory(MyDynamicComponent);
+		// get reference to the view container in which we'll create this new component
+		const viewContainerRef = this.componentHost.viewContainerRef;
+		// clear out whatever was previously in that view container
+		viewContainerRef.clear();
 		const componentRef = viewContainerRef.createComponent(componentFactory);
+
+		// attach character @Input() data
 		(<any>componentRef.instance).character = character;
 	}
 
