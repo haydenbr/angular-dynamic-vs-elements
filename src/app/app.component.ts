@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy, ViewChild, ComponentFactoryResolver } fro
 
 import { DataService } from './data.service';
 import { ComponentHostDirective } from './component-host.directive';
-import { CharacterComponent } from './components';
+import { componentMap } from './components';
 
 @Component({
 	selector: 'app-root',
@@ -38,7 +38,7 @@ export class AppComponent implements OnInit, OnDestroy {
 		a dynamic component using the component selector. I guess I would have to keep a map of
 		*/
 
-		const componentFactory = this.componentFactoryResolver.resolveComponentFactory(CharacterComponent);
+		const componentFactory = this.componentFactoryResolver.resolveComponentFactory(componentMap['character']);
 		// get reference to the view container in which we'll create this new component
 		const viewContainerRef = this.componentHost.viewContainerRef;
 		// clear out whatever was previously in that view container
