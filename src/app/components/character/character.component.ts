@@ -10,6 +10,10 @@ export class CharacterComponent {
 	@Input() data;
 	@Output() movieClick = new Subject();
 
+	get name() {
+		return this.data.name;
+	}
+
 	get bio() {
 		return this.data.bio;
 	}
