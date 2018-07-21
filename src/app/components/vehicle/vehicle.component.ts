@@ -8,4 +8,16 @@ import { Subject } from 'rxjs';
 })
 export class VehicleComponent {
 	@Input() data;
+
+	get imageUrl() {
+		return this.data.imageUrl;
+	}
+
+	get description() {
+		return this.data.description;
+	}
+
+	get name() {
+		return this.data.name;
+	}
 }

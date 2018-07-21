@@ -19,7 +19,7 @@ export class DynamicShellComponent implements OnInit {
 
 	ngOnInit() {
 		// get the factory for the desired component
-		const componentType = this.componentMapSvc.lookupComponent('character');
+		const componentType = this.componentMapSvc.lookupComponent(this.data.type);
 		const componentFactory = this.factory.resolveComponentFactory(componentType);
 		// get reference to the view container in which we'll create this new component
 		const viewContainerRef = this.componentHost.viewContainerRef;
