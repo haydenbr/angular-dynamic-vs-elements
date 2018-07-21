@@ -92,6 +92,28 @@ const data = [
 				link: 'https://www.starwars.com/films/solo'
 			}
 		]
+	},
+	{
+		name: 'Tobias Beckett',
+		bio: 'A native of Glee Anselm, Tobias Beckett is a professional thief who’s planned and carried out any number of heists with his crew. Beckett is always aware of the angles and uncertainties – and ready to unholster his blasters if something goes wrong. That’s always a possibility -- Beckett has learned the hard way that trust has its limits.',
+		imageUrl: 'assets/tobias.jpg',
+		movies: [
+			{
+				title: 'Solo: A Star Wars Story',
+				link: 'https://www.starwars.com/films/solo'
+			}
+		]
+	},
+	{
+		name: 'L3-37',
+		bio: 'A self-made droid built from astromech and protocol parts, L3-37 is an enlightened navigator who cares deeply about droid rights. Her ability to connect directly with the Millennium Falcon’s navicomputer lets the freighter plot faster routes than those traveled by more cautious ships. L3-37’s habit of speaking her mind and her relentless advocacy for mechanicals can alienate organic beings.',
+		imageUrl: 'assets/l3-37.jpg',
+		movies: [
+			{
+				title: 'Solo: A Star Wars Story',
+				link: 'https://www.starwars.com/films/solo'
+			}
+		]
 	}
 ];
 
