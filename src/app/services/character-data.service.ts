@@ -118,8 +118,8 @@ const data = [
 ];
 
 @Injectable()
-export class DataService {
-	getData() {
+export class CharacterDataService {
+	getCharacterData() {
 		return data;
 	}
 }

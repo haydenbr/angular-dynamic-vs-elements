@@ -1,6 +1,6 @@
 import { Injectable, ComponentFactoryResolver, Type } from '@angular/core';
 
-import { COMPONENTS } from './index';
+import { COMPONENTS } from '../components';
 
 @Injectable()
 export class ComponentMapService {

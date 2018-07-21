@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { COMPONENTS } from './components';
-import { ComponentMapService } from './components/component-map.service';
-import { DataService } from './data.service';
+import { SERVICES } from './services';
 import { ComponentHostDirective } from './component-host.directive';
 
 @NgModule({
@@ -16,7 +15,7 @@ import { ComponentHostDirective } from './component-host.directive';
 	imports: [
 		BrowserModule
 	],
-	providers: [DataService, ComponentMapService],
+	providers: [SERVICES],
 	bootstrap: [AppComponent],
 	entryComponents: [COMPONENTS]
 })

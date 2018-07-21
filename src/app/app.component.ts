@@ -1,8 +1,7 @@
 import { Component, OnInit, OnDestroy, ViewChild, ComponentFactoryResolver } from '@angular/core';
 
-import { DataService } from './data.service';
+import { CharacterDataService, ComponentMapService } from './services';
 import { ComponentHostDirective } from './component-host.directive';
-import { ComponentMapService } from './components/component-map.service';
 
 @Component({
 	selector: 'app-root',
@@ -10,12 +9,12 @@ import { ComponentMapService } from './components/component-map.service';
 	styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, OnDestroy {
-	characters: any[] = this.dataSvc.getData();
+	characters: any[] = this.dataSvc.getCharacterData();
 	@ViewChild(ComponentHostDirective) componentHost: ComponentHostDirective;
 	interval: any;
 
 	constructor(
-		private dataSvc: DataService,
+		private dataSvc: CharacterDataService,
 		private componentFactoryResolver: ComponentFactoryResolver,
 		private componentMapSvc: ComponentMapService
 	) {}
