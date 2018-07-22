@@ -9,6 +9,7 @@ import { Subject } from 'rxjs';
 export class CharacterComponent {
 	@Input() data;
 	@Output() movieClick = new Subject();
+	private alt = false;
 
 	get name() {
 		return this.data.name;
@@ -19,10 +20,18 @@ export class CharacterComponent {
 	}
 
 	get imageUrl() {
-		return this.data.imageUrl;
+		return this.alt ? this.altImageUrl : this.data.imageUrl;
+	}
+
+	get altImageUrl() {
+		return this.data.imageUrl.split('.')[0] + '-alt.jpg';
 	}
 
 	get movies() {
 		return this.data.movies;
+	}
+
+	imageClick() {
+		this.alt = !this.alt;
 	}
 }
