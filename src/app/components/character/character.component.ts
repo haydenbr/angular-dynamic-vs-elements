@@ -1,10 +1,11 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, Input, Output, ViewEncapsulation } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Component({
 	selector: 'character',
 	templateUrl: 'character.component.html',
-	styleUrls: [ 'character.component.css' ]
+	styleUrls: [ 'character.component.css' ],
+	encapsulation: ViewEncapsulation.Native
 })
 export class CharacterComponent {
 	@Input() data;

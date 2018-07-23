@@ -1,13 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injector, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
+import { ItsATrapComponent } from './its-a-trap.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { COMPONENTS } from './components';
 import { CONTAINERS } from './containers';
-import { DIRECTIVES } from './directives';
-import { ComponentMapService } from './component-map.service';
-import { DynamicShellComponent } from './dynamic-shell.component';
 import { SERVICES } from './services';
 
 @NgModule({
@@ -15,15 +13,17 @@ import { SERVICES } from './services';
 		AppComponent,
 		COMPONENTS,
 		CONTAINERS,
-		DIRECTIVES,
-		DynamicShellComponent
+		ItsATrapComponent
 	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule
 	],
-	providers: [SERVICES, ComponentMapService],
+	providers: [SERVICES],
 	bootstrap: [AppComponent],
-	entryComponents: [COMPONENTS]
+	entryComponents: [COMPONENTS, ItsATrapComponent],
+	schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+export class AppModule {
+	constructor() {}
+}
