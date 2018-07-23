@@ -1,14 +1,12 @@
 import { Component, ViewChild, ComponentFactoryResolver } from '@angular/core';
 
-import { ListDataService } from './services';
-
 @Component({
 	selector: 'app-root',
-	templateUrl: './app.component.html',
-	styleUrls: ['./app.component.css']
+	template: `
+		<h1 style="color: black;">
+			Solo: Dynamic Components vs Angular Elements
+		</h1>
+		<router-outlet></router-outlet>
+	`
 })
-export class AppComponent {
-	data: any[] = this.listDataSvc.getData();
-
-	constructor(private listDataSvc: ListDataService) {}
-}
+export class AppComponent {}

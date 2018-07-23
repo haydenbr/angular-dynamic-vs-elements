@@ -4,7 +4,14 @@
 	<div class="bio">{{bio}}</div>
 	<ul class="movies">
 		<li *ngFor="let movie of movies">
-			<a class="link" [href]="movie.link" target="_blank">{{movie.title}}</a>
+			<a
+				class="link"
+				[href]="movie.link"
+				target="_blank"
+				(click)="movieClick.next()"
+			>
+				{{movie.title}}
+			</a>
 		</li>
 	</ul>
 </div>
