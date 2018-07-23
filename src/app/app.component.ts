@@ -1,7 +1,4 @@
-import { Component, ViewChild, ComponentFactoryResolver, Injector } from '@angular/core';
-import { createCustomElement, NgElement, WithProperties, NgElementConstructor } from '@angular/elements';
-
-import { ItsATrapComponent } from './its-a-trap.component';
+import { Component } from '@angular/core';
 
 @Component({
 	selector: 'app-root',
@@ -12,9 +9,4 @@ import { ItsATrapComponent } from './its-a-trap.component';
 		<router-outlet></router-outlet>
 	`
 })
-export class AppComponent {
-	constructor(private injector: Injector) {
-		const ItsATrapElement = createCustomElement(ItsATrapComponent, { injector });
-		customElements.define('admiral-ackbar', ItsATrapElement);
-	}
-}
+export class AppComponent {}

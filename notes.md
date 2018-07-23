@@ -23,3 +23,5 @@ Too much coupling:
 
 - output target has to be es6 in `tsconfig.json` because web components depened on es6 classes, rather than 
 - you have to add `schemas: [CUSTOM_ELEMENTS_SCHEMA]` to ngmodule because angular won't know about the custom element tag ... and it will barf.
+- angular outputs dont bubble, because they're not real events. Those outputs are converted to dom custom events in `createCustomElement`
+- change detection issues

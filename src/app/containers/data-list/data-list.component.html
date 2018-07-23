@@ -1,14 +1,25 @@
-<div class="list-container">
-	<!-- <dynamic-shell
-		*ngFor="let item of data"
-		[data]="item"
-	></dynamic-shell> -->
-	<!-- <solo-character
-		*ngFor="let item of data"
-		[data]="item"
-	></solo-character> -->
-	<its-a-trap></its-a-trap>
-	<h3 style="color: black">i am an angular component</h3>
-	<admiral-ackbar></admiral-ackbar>
-	<h3 style="color: black">i am a web component</h3>
+<div class="list-container" *ngIf="data">
+	<ng-container *ngFor="let item of data">
+		<vehicle-element
+			*ngIf="item.type === 'vehicle'"
+			[data]="item"
+		></vehicle-element>
+		<character-element
+			*ngIf="item.type === 'character'"
+			[data]="item"
+		></character-element>
+		<!-- <its-a-trap-element
+			message="i am a web component"
+			(imgClick)="onImgClick($event)"
+		></its-a-trap-element> -->
+	</ng-container>
 </div>
+
+<its-a-trap
+	message="i am an angular component"
+	(imgClick)="onImgClick($event)"
+></its-a-trap>
+<its-a-trap-element
+	message="i am a web component"
+	(imgClick)="onImgClick($event)"
+></its-a-trap-element>

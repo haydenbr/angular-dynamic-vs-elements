@@ -1840,6 +1840,12 @@ electron-to-chromium@^1.3.47:
   version "1.3.52"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.52.tgz#d2d9f1270ba4a3b967b831c40ef71fb4d9ab5ce0"
 
+elements-zone-strategy@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/elements-zone-strategy/-/elements-zone-strategy-6.0.3.tgz#0102e7bf72c47d6106d87b3c4858274254626256"
+  dependencies:
+    tslib "^1.9.0"
+
 elliptic@^6.0.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/elliptic/-/elliptic-6.4.0.tgz#cac9af8762c85836187003c8dfe193e5e2eae5df"
