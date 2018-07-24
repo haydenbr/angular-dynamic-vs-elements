@@ -8,7 +8,7 @@ const selector = 'character';
 	templateUrl: 'character.component.html',
 	styleUrls: [ 'character.component.css' ],
 	encapsulation: ViewEncapsulation.Native,
-	changeDetection: ChangeDetectionStrategy.OnPush
+	// changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CharacterComponent {
 	static elementSelector = selector + '-element';

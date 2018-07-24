@@ -1,19 +1,21 @@
 <div class="list-container" *ngIf="data">
 	<ng-container *ngFor="let item of data">
-		<vehicle-element
+		<!-- <vehicle-element
 			*ngIf="item.type === 'vehicle'"
 			[data]="item"
 		></vehicle-element>
 		<character-element
 			*ngIf="item.type === 'character'"
 			[data]="item"
-		></character-element>
+		></character-element> -->
 		<!-- <its-a-trap-element
 			message="i am a web component"
 			(imgClick)="onImgClick($event)"
 		></its-a-trap-element> -->
 	</ng-container>
 </div>
+
+<div id="container"></div>
 
 <its-a-trap
 	message="i am an angular component"
